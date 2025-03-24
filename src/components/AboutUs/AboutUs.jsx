@@ -1,0 +1,148 @@
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+const AboutUs = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-[#E9EFFF] to-white py-16 px-6">
+      <div className="max-w-5xl mx-auto text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-extrabold text-[#204099] mb-4"
+        >
+          About Us
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-gray-600 text-lg max-w-3xl mx-auto"
+        >
+          Elevate your career with our{" "}
+          <span className="font-semibold">
+            Early Childhood Care & Education (ECCE)
+          </span>{" "}
+          course. Designed for aspiring educators, caregivers, and new mothers,
+          our program focuses on{" "}
+          <span className="font-semibold">child-centered learning</span> and
+          holistic development.
+        </motion.p>
+      </div>
+
+      {/* Cards Section */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* Card 1 */}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="bg-white rounded-xl shadow-lg p-6 text-center overflow-hidden"
+        >
+          <Image
+            src="/assets/7.jpg"
+            alt="Holistic Development"
+            width={300}
+            height={200}
+            className="w-full h-40 object-cover rounded-lg"
+          />
+          <h3 className="text-xl font-semibold text-[#204099] mt-4">
+            Holistic Development
+          </h3>
+          <p className="text-gray-600 mt-3">
+            We emphasize{" "}
+            <span className="font-semibold">
+              cognitive, social, emotional, and physical growth
+            </span>
+            , ensuring a well-rounded foundation for every child.
+          </p>
+        </motion.div>
+
+        {/* Card 2 */}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="bg-white rounded-xl shadow-lg p-6 text-center overflow-hidden"
+        >
+          <Image
+            src="/assets/8.jpg"
+            alt="Global Perspective"
+            width={300}
+            height={200}
+            className="w-full h-40 object-cover rounded-lg"
+          />
+          <h3 className="text-xl font-semibold text-[#204099] mt-4">
+            Global Perspective
+          </h3>
+          <p className="text-gray-600 mt-3">
+            Our ECCE curriculum is{" "}
+            <span className="font-semibold">recognized worldwide</span>,
+            preparing caregivers and educators to understand young children
+            across cultures.
+          </p>
+        </motion.div>
+
+        {/* Card 3 */}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          className="bg-white rounded-xl shadow-lg p-6 text-center overflow-hidden"
+        >
+          <Image
+            src="/assets/9.jpg"
+            alt="For Educators & Parents"
+            width={300}
+            height={200}
+            className="w-full h-40 object-cover rounded-lg"
+          />
+          <h3 className="text-xl font-semibold text-[#204099] mt-4">
+            For Educators & Parents
+          </h3>
+          <p className="text-gray-600 mt-3">
+            This course benefits{" "}
+            <span className="font-semibold">
+              new mothers, teachers, and infant caregivers
+            </span>
+            , providing deep insights into early childhood learning.
+          </p>
+        </motion.div>
+      </div>
+
+      {/* Future of Education Section */}
+      <div className="max-w-4xl mx-auto mt-16 p-8 bg-white rounded-lg shadow-lg text-center">
+        <motion.h3
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-2xl font-semibold text-[#204099]"
+        >
+          The Future of Early Childhood Education
+        </motion.h3>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-gray-600 mt-4"
+        >
+          With the{" "}
+          <span className="font-semibold">National Education Policy (NEP)</span>{" "}
+          focusing on play-based learning and inclusivity, our ECCE curriculum
+          sets the{" "}
+          <span className="font-semibold">
+            gold standard for early education
+          </span>
+          . Join us in shaping the future of young learners.
+        </motion.p>
+      </div>
+    </div>
+  );
+};
+
+export default AboutUs;
