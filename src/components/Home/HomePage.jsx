@@ -28,7 +28,7 @@ const slides = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#1E1F4B] to-[#0F172A] text-white">
+    <main className="min-h-screen bg-gradient-to-br from-pink-100 via-blue-100 to-white text-white">
       {/* Hero Section */}
       <section className="py-16 px-8 md:px-20 text-center">
         <motion.div
@@ -37,17 +37,17 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-            Shaping the Future of Education
+          <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900">
+          Creating Strong Foundations for Lifelong Learning.
           </h1>
-          <p className="mt-4 text-lg text-gray-300">
+          <p className="mt-4 text-xl text-blue-600">
             Elevating learning experiences with innovative solutions.
           </p>
         </motion.div>
       </section>
 
       {/* Carousel Section */}
-      <section className="py-16 px-8 md:px-20">
+      <section className="py-16 px-8 md:px-20 ">
         <Swiper
           modules={[Autoplay]}
           slidesPerView={1}

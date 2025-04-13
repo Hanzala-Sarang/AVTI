@@ -11,7 +11,7 @@ const AboutUs = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl font-extrabold text-[#204099] mb-4"
+          className="text-4xl font-extrabold text-blue-900 mb-4"
         >
           About Us
         </motion.h2>
@@ -19,16 +19,37 @@ const AboutUs = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-gray-600 text-lg max-w-3xl mx-auto"
+          className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed text-justify"
         >
-          Elevate your career with our{" "}
+          <span className="font-semibold">Advanced</span> offers a comprehensive
+          course in{" "}
           <span className="font-semibold">
             Early Childhood Care & Education (ECCE)
-          </span>{" "}
-          course. Designed for aspiring educators, caregivers, and new mothers,
-          our program focuses on{" "}
-          <span className="font-semibold">child-centered learning</span> and
-          holistic development.
+          </span>
+          . This professional diploma course prepares candidates to enter the
+          highly respected and rewarding field of education. Modern educational
+          thought emphasizes that early childhood education lays the foundation
+          for lifelong learning and whole-person development. The core value of
+          early childhood education today lies in{" "}
+          <span className="font-semibold">child-centeredness</span>, which
+          focuses on the care and education of children from birth through six
+          years of age.
+          <br />
+          <br />
+          ECCE has a global scope, as caring for and educating young children
+          has always been a vital part of human societies. In recent years,
+          early childhood education has gained increasing importance and has
+          emerged as a global priority. It is designed to promote the cognitive,
+          social, emotional, and physical development of children from infancy
+          to age six.
+          <br />
+          <br />
+          At Advanced, we follow a{" "}
+          <span className="font-semibold">child-centered approach</span>,
+          recognizing that each child is unique and learns in their own way. We
+          are committed to continuous improvement and staying up to date with
+          the latest research and best practices in early childhood care and
+          education.
         </motion.p>
       </div>
 
@@ -52,7 +73,7 @@ const AboutUs = () => {
           <h3 className="text-xl font-semibold text-[#204099] mt-4">
             Holistic Development
           </h3>
-          <p className="text-gray-600 mt-3">
+          <p className="text-gray-600 mt-3 text-justify">
             We emphasize{" "}
             <span className="font-semibold">
               cognitive, social, emotional, and physical growth
@@ -79,7 +100,7 @@ const AboutUs = () => {
           <h3 className="text-xl font-semibold text-[#204099] mt-4">
             Global Perspective
           </h3>
-          <p className="text-gray-600 mt-3">
+          <p className="text-gray-600 mt-3 text-justify">
             Our ECCE curriculum is{" "}
             <span className="font-semibold">recognized worldwide</span>,
             preparing caregivers and educators to understand young children
@@ -105,7 +126,7 @@ const AboutUs = () => {
           <h3 className="text-xl font-semibold text-[#204099] mt-4">
             For Educators & Parents
           </h3>
-          <p className="text-gray-600 mt-3">
+          <p className="text-gray-600 mt-3 text-justify">
             This course benefits{" "}
             <span className="font-semibold">
               new mothers, teachers, and infant caregivers
@@ -129,7 +150,7 @@ const AboutUs = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-gray-600 mt-4"
+          className="text-gray-600 mt-4 text-justify"
         >
           With the{" "}
           <span className="font-semibold">National Education Policy (NEP)</span>{" "}

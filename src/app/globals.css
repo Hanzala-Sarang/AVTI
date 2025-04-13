@@ -171,3 +171,9 @@ h6 {
     transform: translate(100px, 100px) rotate(112deg);
   }
 }
+
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

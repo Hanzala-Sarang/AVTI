@@ -9,16 +9,18 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-around px-6 md:px-12 py-8 gap-12 md:gap-20">
         {/* Logo & Social Media Section */}
         <div className="w-full md:w-1/3 mt-8 md:mt-0 flex flex-col">
-          <Image
-            src="/footer-logo.png"
-            alt="AVTI Logo"
-            width={100}
-            height={100}
-          />
-          <p className="mt-4 text-gray-700 max-w-sm">
-            Empowering teachers with advanced training to shape the future of
-            education.
-          </p>
+          <div className="flex flex-row">
+            <Image
+              src="/footer-logo.png"
+              alt="AVTI Logo"
+              width={200}
+              height={120}
+            />
+            <p className="mt-18 text-gray-700 max-w-sm">
+              Empowering teachers with advanced training to shape the future of
+              education.
+            </p>
+          </div>
           {/* Social Media Icons */}
           <div className="flex space-x-4 mt-4">
             <Link
@@ -45,27 +47,29 @@ const Footer = () => {
           </h3>
           {/* Google Map */}
           <div className="relative w-full max-w-md">
-            <Link
+            <a
               href="https://maps.app.goo.gl/cdnM6g8ffRGbhs1H6"
               target="_blank"
-            >
-              <button className="absolute top-3 left-3 bg-[#204099] text-white px-3 py-1 text-sm rounded-md shadow-md">
-                View Larger Map
-              </button>
-              <Image
-                src="/google-map.png"
-                alt="Google Map"
-                width={400}
-                height={250}
-                className="rounded-lg shadow-lg transition"
-              />
-            </Link>
+              rel="noopener noreferrer"
+            ></a>
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0403445114553!2d72.91129847466587!3d19.105885951034725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c719b01fd485%3A0x70d427fd2ef1e02f!2sAdvanced%20Vocational%20Training%20Institute%20vikhroli!5e0!3m2!1sen!2sin!4v1744449082477!5m2!1sen!2sin"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
+
           {/* Address */}
           <p className="mt-4 flex items-center space-x-2">
             <MapPin className="w-5 h-5 text-[#204099]" />
             <span className="text-gray-700">
-              AVTI, Vikhroli, BRANCH: Kurla, Mumbai India.
+              Anandgadh Naka, Vikhroli West, Mumbai - 400079.
             </span>
           </p>
           {/* Phone */}
@@ -75,7 +79,7 @@ const Footer = () => {
               href="tel:+919876543210"
               className="hover:underline text-[#000000]"
             >
-              +91 9876543210
+              +91 9372946260
             </Link>
           </p>
           {/* Email */}
@@ -96,13 +100,15 @@ const Footer = () => {
         <p>© 2025 All rights reserved | AVTI</p>
         <p className="flex justify-center items-center space-x-2 mt-2">
           <span>Made with ❤️ by</span>
-          <span className="text-[#000000] font-semibold">NextGenStudio</span>
+          <span className="text-[#000000] font-semibold">
+            NextGrid.Solutions
+          </span>
         </p>
       </div>
 
       {/* WhatsApp Floating Button */}
       <Link
-        href="https://wa.me/919372946260" // Replace with actual WhatsApp number
+        href="https://wa.me/9372946260" // Replace with actual WhatsApp number
         target="_blank"
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition"
       >

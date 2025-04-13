@@ -22,36 +22,35 @@ export async function POST(req) {
       },
     });
 
-    // Path to the image in your Next.js public folder
-    const imagePath = path.resolve("public", "footer-logo.png");
+    // Correct path to the image in your Next.js public folder
+    const imagePath = path.resolve("public", "assets", "course-image.jpg");
     const image = fs.readFileSync(imagePath); // Read the image file
 
-    // Email options with the image attachment
     const mailOptions = {
-      from: `"${name}" <${email}>`, // User's email as sender
-      to: process.env.RECEIVER_EMAIL, // Your email as receiver
+      from: `"${name}" <${email}>`,
+      to: process.env.RECEIVER_EMAIL,
       subject: `New Enquiry from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.5;">
-          <h2>New Course Enquiry from ${name}</h2>
+          <h2>New Course Enquiry: <span style="color: #204099;">ECCE Teacher Training</span></h2>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Phone:</strong> ${phone}</p>
           <p><strong>Message:</strong> ${message}</p>
+          <p><strong>Course:</strong> ECCE Teacher Training</p>
           <br />
-          <img src="cid:footerImage" alt="loading..." style="width: 100%; max-width: 500px; border-radius: 10px;" />
+          <img src="cid:footerLogo" alt="loadibng..." style="width: 100%; max-width: 500px; border-radius: 10px;" />
         </div>
       `,
       attachments: [
         {
-          filename: "footer-image.png", // Attach the image file
-          content: image, // The image content
-          cid: "footerImage", // This CID will be referenced in the HTML
-        },
+          filename: "course-image.jpg",  // Don't include the leading slash here
+          content: image,
+          cid: "footerLogo", // This CID will be referenced in the HTML
+        }
       ],
     };
 
-    // Send the email
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ message: "Enquiry sent successfully!" }, { status: 200 });

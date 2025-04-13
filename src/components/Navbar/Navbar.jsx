@@ -12,9 +12,9 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex items-center space-x-3">
-          <Image src="/loader-logo.png" alt="Logo" width={50} height={50} />
+          <Image src="/loader-logo.png" alt="Logo" width={60} height={60} />
           <Link href="/" className="text-2xl font-bold font-poppins">
-            AVTI
+            Advance Vocational Training Institute
           </Link>
         </div>
 
@@ -65,37 +65,41 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex space-x-6 font-inter font-semibold">
+        <ul className="hidden md:flex space-x-12 font-inter font-semibold">
           <li>
             <Link
               href="/"
-              className="hover:text-[#0F172A] transition-colors duration-300"
+              className="relative group hover:text-[#0F172A] transition-colors duration-300"
             >
               Home
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0F172A] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </li>
           <li>
             <Link
               href="/about-us"
-              className="hover:text-[#0F172A] transition-colors duration-300"
+              className="relative group hover:text-[#0F172A] transition-colors duration-300"
             >
               About Us
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0F172A] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </li>
           <li>
             <Link
               href="/courses"
-              className="hover:text-[#0F172A] transition-colors duration-300"
+              className="relative group hover:text-[#0F172A] transition-colors duration-300"
             >
               Courses
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0F172A] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </li>
           <li>
             <Link
               href="/connect-with-us"
-              className="hover:text-[#0F172A] transition-colors duration-300"
+              className="relative group hover:text-[#0F172A] transition-colors duration-300"
             >
               Let's Connect
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#0F172A] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </li>
         </ul>
