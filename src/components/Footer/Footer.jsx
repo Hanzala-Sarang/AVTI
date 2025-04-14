@@ -9,20 +9,23 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-around px-6 md:px-12 py-8 gap-12 md:gap-20">
         {/* Logo & Social Media Section */}
         <div className="w-full md:w-1/3 mt-8 md:mt-0 flex flex-col">
-          <div className="flex flex-row">
+          {/* Updated layout for logo and text */}
+          <div className="flex flex-row items-center gap-4">
             <Image
               src="/footer-logo.png"
               alt="AVTI Logo"
-              width={200}
-              height={120}
+              width={140}
+              height={140}
+              className="object-contain"
             />
-            <p className="mt-18 text-gray-700 max-w-sm">
+            <p className="text-gray-700 text-sm md:text-base max-w-sm text-justify">
               Empowering teachers with advanced training to shape the future of
               education.
             </p>
           </div>
+
           {/* Social Media Icons */}
-          <div className="flex space-x-4 mt-4">
+          <div className="flex space-x-4 mt-4 ml-2 md:ml-0">
             <Link
               href="https://www.facebook.com/profile.php?id=61555134747838"
               target="_blank"
@@ -45,6 +48,7 @@ const Footer = () => {
           <h3 className="text-xl font-bold text-[#000000] mb-4">
             Connect with AVTI
           </h3>
+
           {/* Google Map */}
           <div className="relative w-full max-w-md">
             <a
@@ -58,7 +62,7 @@ const Footer = () => {
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
-                allowFullScreen=""
+                allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
@@ -72,16 +76,18 @@ const Footer = () => {
               Anandgadh Naka, Vikhroli West, Mumbai - 400079.
             </span>
           </p>
+
           {/* Phone */}
           <p className="mt-2 flex items-center space-x-2">
             <Phone className="w-5 h-5 text-[#204099]" />
             <Link
-              href="tel:+919876543210"
+              href="tel:+919372946260"
               className="hover:underline text-[#000000]"
             >
               +91 9372946260
             </Link>
           </p>
+
           {/* Email */}
           <p className="mt-2 flex items-center space-x-2">
             <Mail className="w-5 h-5 text-[#204099]" />
@@ -108,7 +114,7 @@ const Footer = () => {
 
       {/* WhatsApp Floating Button */}
       <Link
-        href="https://wa.me/9372946260" // Replace with actual WhatsApp number
+        href="https://wa.me/9372946260"
         target="_blank"
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition"
       >

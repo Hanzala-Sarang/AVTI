@@ -38,10 +38,13 @@ export default function Home() {
           transition={{ duration: 1 }}
         >
           <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900">
-          Creating Strong Foundations for Lifelong Learning.
+            Creating Strong Foundations for Lifelong Learning.
           </h1>
           <p className="mt-4 text-xl text-blue-600">
-            Elevating learning experiences with innovative solutions.
+            ECCE ensures holistic development of a child by attending to the
+            childs social, emotional, cognitive and physical needs which in
+            turns provides a solid foundation for life long
+            learning and well being.
           </p>
         </motion.div>
       </section>
