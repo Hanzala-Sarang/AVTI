@@ -105,7 +105,7 @@ const Footer = () => {
       <div className="border-t border-gray-300 mt-8 pt-4 text-center text-sm text-gray-600">
         <p>© 2025 All rights reserved | AVTI</p>
         <p className="flex justify-center items-center space-x-2 mt-2">
-          <span>Made with ❤️ by</span>
+          <span>Developed with ❤️ by</span>
           <span className="text-[#000000] font-semibold">
             NextGrid.Solutions
           </span>

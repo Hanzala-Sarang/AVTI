@@ -2,16 +2,33 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Nunito, Quicksand } from "next/font/google";
+
+// Define the font objects.  You can adjust the weights as needed.
+const nunito = Nunito({
+  subsets: ["latin"],
+  weights: [400, 600, 700], // Example weights
+  variable: "--font-nunito", //Make it a css variable
+});
+
+const quicksand = Quicksand({
+  subsets: ["latin"],
+  weights: [500, 700], // Example weights
+  variable: "--font-quicksand", //Make it a css variable
+});
 
 const AboutUs = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#E9EFFF] to-white py-16 px-6">
+    <div
+      className={`${nunito.variable} ${quicksand.variable} min-h-screen bg-gradient-to-b from-[#E9EFFF] to-white py-16 px-6`}
+    >
       <div className="max-w-5xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-4xl font-extrabold text-blue-900 mb-4"
+          style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 700 }}
         >
           About Us
         </motion.h2>
@@ -20,10 +37,19 @@ const AboutUs = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed text-justify"
+          style={{ fontFamily: '"Nunito", sans-serif' }}
         >
-          <span className="font-semibold">Advanced</span> offers a comprehensive
-          course in{" "}
-          <span className="font-semibold">
+          <span
+            className="font-semibold"
+            style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 600 }}
+          >
+            Advanced
+          </span>{" "}
+          offers a comprehensive course in{" "}
+          <span
+            className="font-semibold"
+            style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 600 }}
+          >
             Early Childhood Care & Education (ECCE)
           </span>
           . This professional diploma course prepares candidates to enter the
@@ -31,9 +57,14 @@ const AboutUs = () => {
           thought emphasizes that early childhood education lays the foundation
           for lifelong learning and whole-person development. The core value of
           early childhood education today lies in{" "}
-          <span className="font-semibold">child-centeredness</span>, which
-          focuses on the care and education of children from birth through six
-          years of age.
+          <span
+            className="font-semibold"
+            style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 600 }}
+          >
+            child-centeredness
+          </span>
+          , which focuses on the care and education of children from birth
+          through six years of age.
           <br />
           <br />
           ECCE has a global scope, as caring for and educating young children
@@ -45,9 +76,14 @@ const AboutUs = () => {
           <br />
           <br />
           At Advanced, we follow a{" "}
-          <span className="font-semibold">child-centered approach</span>,
-          recognizing that each child is unique and learns in their own way. We
-          are committed to continuous improvement and staying up to date with
+          <span
+            className="font-semibold"
+            style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 600 }}
+          >
+            child-centered approach
+          </span>
+          , recognizing that each child is unique and learns in their own way.
+          We are committed to continuous improvement and staying up to date with
           the latest research and best practices in early childhood care and
           education.
         </motion.p>
@@ -70,12 +106,21 @@ const AboutUs = () => {
             height={200}
             className="w-full h-40 object-cover rounded-lg"
           />
-          <h3 className="text-xl font-semibold text-[#204099] mt-4">
+          <h3
+            className="text-xl font-semibold text-[#204099] mt-4"
+            style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 700 }}
+          >
             Holistic Development
           </h3>
-          <p className="text-gray-600 mt-3 text-justify">
+          <p
+            className="text-gray-600 mt-3 text-justify"
+            style={{ fontFamily: '"Nunito", sans-serif' }}
+          >
             We emphasize{" "}
-            <span className="font-semibold">
+            <span
+              className="font-semibold"
+              style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 600 }}
+            >
               cognitive, social, emotional, and physical growth
             </span>
             , ensuring a well-rounded foundation for every child.
@@ -97,13 +142,24 @@ const AboutUs = () => {
             height={200}
             className="w-full h-40 object-cover rounded-lg"
           />
-          <h3 className="text-xl font-semibold text-[#204099] mt-4">
+          <h3
+            className="text-xl font-semibold text-[#204099] mt-4"
+            style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 700 }}
+          >
             Global Perspective
           </h3>
-          <p className="text-gray-600 mt-3 text-justify">
+          <p
+            className="text-gray-600 mt-3 text-justify"
+            style={{ fontFamily: '"Nunito", sans-serif' }}
+          >
             Our ECCE curriculum is{" "}
-            <span className="font-semibold">recognized worldwide</span>,
-            preparing caregivers and educators to understand young children
+            <span
+              className="font-semibold"
+              style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 600 }}
+            >
+              recognized worldwide
+            </span>
+            , preparing caregivers and educators to understand young children
             across cultures.
           </p>
         </motion.div>
@@ -123,12 +179,21 @@ const AboutUs = () => {
             height={200}
             className="w-full h-40 object-cover rounded-lg"
           />
-          <h3 className="text-xl font-semibold text-[#204099] mt-4">
+          <h3
+            className="text-xl font-semibold text-[#204099] mt-4"
+            style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 700 }}
+          >
             For Educators & Parents
           </h3>
-          <p className="text-gray-600 mt-3 text-justify">
+          <p
+            className="text-gray-600 mt-3 text-justify"
+            style={{ fontFamily: '"Nunito", sans-serif' }}
+          >
             This course benefits{" "}
-            <span className="font-semibold">
+            <span
+              className="font-semibold"
+              style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 600 }}
+            >
               new mothers, teachers, and infant caregivers
             </span>
             , providing deep insights into early childhood learning.
@@ -143,6 +208,7 @@ const AboutUs = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-2xl font-semibold text-[#204099]"
+          style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 700 }}
         >
           The Future of Early Childhood Education
         </motion.h3>
@@ -151,17 +217,51 @@ const AboutUs = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-gray-600 mt-4 text-justify"
+          style={{ fontFamily: '"Nunito", sans-serif' }}
         >
           With the{" "}
-          <span className="font-semibold">National Education Policy (NEP)</span>{" "}
+          <span
+            className="font-semibold"
+            style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 600 }}
+          >
+            National Education Policy (NEP)
+          </span>{" "}
           focusing on play-based learning and inclusivity, our ECCE curriculum
           sets the{" "}
-          <span className="font-semibold">
+          <span
+            className="font-semibold"
+            style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 600 }}
+          >
             gold standard for early education
           </span>
           . Join us in shaping the future of young learners.
         </motion.p>
       </div>
+      <style global jsx>{`
+        :root {
+          ${nunito.variable}: ${nunito.style.fontFamily};
+          ${quicksand.variable}: ${quicksand.style.fontFamily};
+        }
+
+        body {
+          font-family: ${nunito.style.fontFamily}, sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: ${quicksand.style.fontFamily}, sans-serif;
+          font-weight: 500;
+        }
+
+        strong {
+          font-family: ${quicksand.style.fontFamily}, sans-serif;
+          font-weight: 600;
+        }
+      `}</style>
     </div>
   );
 };

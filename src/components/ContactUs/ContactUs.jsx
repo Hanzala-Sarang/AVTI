@@ -33,6 +33,10 @@ const ContactUs = () => {
           position: "top-right",
         });
         setFormData({ name: "", email: "", phone: "", message: "" });
+        setTimeout(() => {
+          window.location.href =
+            "https://www.instagram.com/avtiteachertraining/";
+        }, 3000);
       } else {
         toast.error("Failed to send enquiry. Please try again.", {
           position: "top-right",

@@ -52,21 +52,31 @@ export default function Course() {
       });
 
       if (response.ok) {
-        toast.success("Your enquiry has been sent successfully!", {
-          position: "top-right",
-        });
+        toast.success(
+          "🎉 Your enquiry has been sent successfully! Redirecting you to our Instagram page...",
+          {
+            position: "top-right",
+            autoClose: 2500,
+          }
+        );
+
         setFormData({ name: "", email: "", phone: "" });
+        setLoading(false); // Stop loading before redirect
+
+        setTimeout(() => {
+          window.location.href =
+            "https://www.instagram.com/avtiteachertraining/";
+        }, 3000);
       } else {
-        toast.error("Failed to send enquiry. Please try again.", {
-          position: "top-right",
-        });
+        throw new Error("Failed to send enquiry.");
       }
     } catch (error) {
+      console.error("Enquiry error:", error);
       toast.error("Something went wrong. Please try again.", {
         position: "top-right",
       });
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   const topics = [
@@ -110,8 +120,8 @@ export default function Course() {
     >
       {/* Headline */}
       <h1
-        className="text-2xl md:text-3xl font-bold text-center mb-8 text-blue-900 leading-tight uppercase"
-        style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 500 }}
+        className="text-3xl md:text-4xl font-extrabold text-blue-900 text-center mb-8 leading-tight  uppercase"
+        style={{ fontFamily: '"Quicksand", sans-serif', fontWeight: 700 }}
       >
         To the world you’re a teacher,
         <br />
